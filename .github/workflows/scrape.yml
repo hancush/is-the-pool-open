@@ -15,7 +15,7 @@ jobs:
       - name: Scrape pool data
         run: |
           cd data
-          pip3 install -r requirements.txt
+          pip install -r requirements.txt
           scrapy crawl chi_parks_pool_spider -O ../src/data/pools.json
       - uses: EndBug/add-and-commit@v9
         with:
