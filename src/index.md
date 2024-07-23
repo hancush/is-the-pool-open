@@ -41,10 +41,6 @@ sidebar: false
 </div>
 
 ```js
-FileAttachment("preview.png").image();
-````
-
-```js
 const turf = import("npm:@turf/helpers@7");
 const turfDistance = import("npm:@turf/distance@7");
 const pools = FileAttachment("data/pools.json").json({typed: true});
