@@ -30,7 +30,7 @@ export default {
     <meta property="og:url" content="https://metatags.io/" />
     <meta property="og:title" content="Is The Pool Open????" />
     <meta property="og:description" content="Find an open Chicago Park District pool near you!" />
-    <meta property="og:image" content="https://github.com/hancush/is-the-pool-open/blob/main/src/preview.png?raw=true" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/hancush/is-the-pool-open/main/src/preview.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
