@@ -37,7 +37,7 @@ export default {
     <meta property="twitter:url" content="https://metatags.io/" />
     <meta property="twitter:title" content="Is The Pool Open????" />
     <meta property="twitter:description" content="Find an open Chicago Park District pool near you!" />
-    <meta property="twitter:image" content="https://github.com/hancush/is-the-pool-open/blob/main/src/preview.png?raw=true" />
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/hancush/is-the-pool-open/main/src/preview.png" />
   `,
 
   // The path to the source root.
