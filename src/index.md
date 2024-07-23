@@ -34,7 +34,7 @@ sidebar: false
       </td>
       <td style="vertical-align: middle;">
         <h1>Is The Pool Open????</h1>
-        <em>Find an open Chicago Parks District pool near you!</em>
+        <em>Find an open Chicago Park District pool near you!</em>
       </td>
     </tr>
   </table>

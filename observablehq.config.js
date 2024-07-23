@@ -17,7 +17,30 @@ export default {
   // ],
 
   // Content to add to the head of the page, e.g. for a favicon:
-  head: '<link rel="icon" href="favicon.ico" type="image/png" sizes="32x32">',
+  head: `
+    <link rel="icon" href="favicon.ico" type="image/png" sizes="32x32">
+
+    <!-- Primary Meta Tags -->
+    <title>Is The Pool Open????</title>
+    <meta name="title" content="Is The Pool Open????" />
+    <meta name="description" content="Find an open Chicago Park District pool near you!" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Is The Pool Open????" />
+    <meta property="og:description" content="Find an open Chicago Park District pool near you!" />
+    <meta property="og:image" content="preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Is The Pool Open????" />
+    <meta property="twitter:description" content="Find an open Chicago Park District pool near you!" />
+    <meta property="twitter:image" content="preview.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+  `,
 
   // The path to the source root.
   root: "src",
