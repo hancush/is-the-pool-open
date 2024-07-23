@@ -30,14 +30,14 @@ export default {
     <meta property="og:url" content="https://metatags.io/" />
     <meta property="og:title" content="Is The Pool Open????" />
     <meta property="og:description" content="Find an open Chicago Park District pool near you!" />
-    <meta property="og:image" content="https://i.imgur.com/XtwXGSS.png" />
+    <meta property="og:image" content="https://github.com/hancush/is-the-pool-open/blob/main/src/preview.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://metatags.io/" />
     <meta property="twitter:title" content="Is The Pool Open????" />
     <meta property="twitter:description" content="Find an open Chicago Park District pool near you!" />
-    <meta property="twitter:image" content="https://i.imgur.com/XtwXGSS.png" />
+    <meta property="twitter:image" content="https://github.com/hancush/is-the-pool-open/blob/main/src/preview.png" />
   `,
 
   // The path to the source root.

@@ -6,6 +6,28 @@ sidebar: false
 ---
 
 <style type="text/css">
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width:990px) {
+    .item:first-child {
+      padding-right: 20px;
+    }
+  }
+
+  @media screen and (max-width:990px) {
+    .header {
+      flex-wrap: wrap; 
+    }
+    .item:first-child {
+      flex-basis: 100%;
+      padding-bottom: 20px;
+    }
+  }
+
   h2, h3 {
     margin-bottom: 0;
   }
@@ -23,21 +45,16 @@ sidebar: false
   }
 </style>
 
-
-<div align="center">
-  <table>
-    <tr>
-      <td style="font-size: 20pt;" align="center">
-        💦💦💦💦<br />
-        <span style="color: red; font-size: 20pt;">✶ ✶ ✶ ✶</span><br />
-        💦💦💦💦
-      </td>
-      <td style="vertical-align: middle;">
-        <h1>Is The Pool Open????</h1>
-        <em>Find an open Chicago Park District pool near you!</em>
-      </td>
-    </tr>
-  </table>
+<div class="header">
+  <div align="center" class="item">
+    💦💦💦💦💦<br />
+    <span style="color: red; font-size: 20pt;">✶ ✶ ✶ ✶</span><br />
+    💦💦💦💦💦
+  </div>
+  <div class="item">
+    <h1>Is The Pool Open????</h1>
+    <em>Find an open Chicago Park District pool near you!</em>
+  </div>
 </div>
 
 ```js
