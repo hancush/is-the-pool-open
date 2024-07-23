@@ -41,7 +41,12 @@ sidebar: false
 </div>
 
 ```js
-const turf = import("npm:@turf/turf@7");
+FileAttachment("preview.png").image();
+````
+
+```js
+const turf = import("npm:@turf/helpers@7");
+const turfDistance = import("npm:@turf/distance@7");
 const pools = FileAttachment("data/pools.json").json({typed: true});
 ```
 
@@ -193,7 +198,7 @@ if (address) {
     const poolPoint = turf.point([pool.lon, pool.lat], pool)
     return {
       ...pool,
-      distance: turf.distance(positionPoint, poolPoint, {units: "miles"})
+      distance: turfDistance.distance(positionPoint, poolPoint, {units: "miles"})
     }
   }).sort((a, b) => a.distance - b.distance)
 
