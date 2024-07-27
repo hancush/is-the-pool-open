@@ -4,6 +4,8 @@ from urllib.parse import urlencode
 from dateutil.parser import parse as parse_date
 import scrapy
 
+from spiders.schedule_pdf import SchedulePdf
+
 
 BASE_URL = "https://www.chicagoparkdistrict.com"
 FACILITIES_URL = f"{BASE_URL}/parks-facilities"
@@ -37,6 +39,13 @@ class ChiParksPoolSpider(scrapy.Spider):
             return ", ".join(
                 unicodedata.normalize("NFKD", piece) for piece in alert_elements[2:]
             )
+
+    def get_schedule_details(self, response):
+        schedule_pdf_urls = response.xpath(
+            "//a[contains(translate(@href, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'schedule') and contains(@href, '.pdf')]/@href"
+        ).getall()
+
+        return {url: SchedulePdf(url).deserialize() for url in schedule_pdf_urls}
 
     def parse_pool(self, response):
         schedule = response.xpath(
@@ -78,6 +87,7 @@ class ChiParksPoolSpider(scrapy.Spider):
             "schedule_pdf_urls": response.xpath(
                 "//a[contains(translate(@href, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'schedule') and contains(@href, '.pdf')]/@href"
             ).getall(),
+            "schedule_details": self.get_schedule_details(response),
             "alert": self.get_alert(response),
             "lat": response.xpath("//meta[@property='latitude']/@content").get(),
             "lon": response.xpath("//meta[@property='longitude']/@content").get(),
